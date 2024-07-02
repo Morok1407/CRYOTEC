@@ -1,0 +1,15 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="checbox-active" viewBox="0 0 32 32">
+<path fill="#00a0ff" style="fill: var(--color1, #00a0ff)" d="M4.8 0h22.4c2.651 0 4.8 2.149 4.8 4.8v22.4c0 2.651-2.149 4.8-4.8 4.8h-22.4c-2.651 0-4.8-2.149-4.8-4.8v-22.4c0-2.651 2.149-4.8 4.8-4.8z"></path>
+<path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="22.9256" stroke-width="3.3939" d="M8 15.079l6.303 5.818 10.182-9.697"></path>
+</symbol>
+<symbol id="checbox" viewBox="0 0 32 32">
+<path fill="#fff" style="fill: var(--color2, #fff)" d="M4.8 1.6h22.4c1.767 0 3.2 1.433 3.2 3.2v22.4c0 1.767-1.433 3.2-3.2 3.2h-22.4c-1.767 0-3.2-1.433-3.2-3.2v-22.4c0-1.767 1.433-3.2 3.2-3.2z"></path>
+<path fill="none" stroke="#c8d2dc" style="stroke: var(--color3, #c8d2dc)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M4.8 1.6h22.4c1.767 0 3.2 1.433 3.2 3.2v22.4c0 1.767-1.433 3.2-3.2 3.2h-22.4c-1.767 0-3.2-1.433-3.2-3.2v-22.4c0-1.767 1.433-3.2 3.2-3.2z"></path>
+</symbol>
+<symbol id="arrow" viewBox="0 0 50 32">
+<path fill="none" stroke="#00a0ff" style="stroke: var(--color4, #00a0ff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="22.9256" stroke-width="5.3333" d="M3.556 3.556l22.349 21.333 20.317-21.333"></path>
+</symbol>
+</defs>
+</svg>

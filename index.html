@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Cryotec</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="overlay" class="overlay"></div>
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header-inner">
+            <div class="header-top">
+              <div class="header__left">
+                <div class="header__left-menu">
+                  <a href="#" onclick="toggleNav()" id="burger-menu"
+                    ><img id="icon-menu" src="img/icon/menu icon.svg" alt=""
+                  /></a>
+                </div>
+                <div class="header__left-phone">
+                  <a href="tel:+7 (495) 620-70-44"
+                    >   <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="img/icon.svg#phone-icon"></use>
+                  </svg></a>
+                </div>
+              </div>
+              <div class="header__logo">
+                <a href="#">
+                  <img src="img/icon/logo.svg" alt="" />
+                </a>
+              </div>
+              <div class="header__contact">
+                <div class="header__contact-phone">
+                  <a href="tel:+7 (495) 620-70-44"
+                    >
+                    <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="img/icon.svg#phone-icon"></use>
+                  </svg>
+                  +7 (495)
+                    620-70-44</a
+                  >
+                </div>
+                <div class="header__contact-login">
+                  <a href="#"
+                    >   <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="img/icon.svg#login-icon"></use>
+                  </svg>Вход /
+                    регистрация</a
+                  >
+                </div>
+              </div>
+              <div class="header__search">
+                <a href="#" class="header__search-lang">En</a>
+                <a href="#" id="search-icon">
+                  <img src="img/icon/search icon.svg" alt="" />
+                </a>
+                <div class="search-container">
+                  <form id="search-form" action="search.html" method="GET">
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      name="query"
+                      id="search-input"
+                      required
+                    />
+                  </form>
+                </div>
+              </div>
+              <div class="header__bascet">
+                <a href="#" class="header__login"
+                  ><img src="img/icon/login icon.svg" alt=""
+                /></a>
+                <a href="#" class="header__bascet-item">
+                  <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use xlink:href="img/icon.svg#basket-icon"></use>
+                </svg>
+                  <p>Корзина</p>
+                </a>
+              </div>
+            </div>
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">Каталог</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link"
+                    >Криотехника по областям</a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">Готовые решения</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">Криотерапия</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">Криохирургия</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">Криоконсервация</a>
+                </li>
+                <ul id="settings" class="header__nav-item header__settings-list">
+                  <li id="settings-main" class="header__settings-main">
+                    <a href="#" class="header__nav-link header__settings-link">Настройки</a>
+                    <svg 
+                        id="settings-arrow"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/other.svg#arrow"></use>
+                    </svg>
+                  </li>
+                  <li class="header__settings-item">
+                    <a href="#" class="header__nav-link header__settings-link">Действие</a>
+                  </li>
+                  <li class="header__settings-item">
+                    <a href="#" class="header__nav-link header__settings-link">Другое действие</a>
+                  </li>                  
+                  <li class="header__settings-item">
+                    <a href="#" class="header__nav-link header__settings-link">Что-то еще здесь </a>
+                  </li>                  
+                </ul>
+                <li class="header__nav-button">
+                  <button id="order-nitrogen">Заказать жидкий азот</button>
+                </li>
+              </ul>
+            </nav>
+            <div id="order" class="header__shipping">
+              <div class="header__shipping-inner">
+                <div class="headeer__shipping-title">
+                  <h2>Заказ жидкого азота</h2>
+                  <button id="close-order-nitrogen">
+                    <img src="img/icon/close icon.svg" alt="" />
+                  </button>
+                </div>
+                <div
+                  id="success"
+                  class="header__shipping-success"
+                  style="display: none"
+                >
+                  <div class="shipping__success-info">
+                    <svg
+                      width="37"
+                      height="47"
+                      viewBox="0 0 37 47"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1 3C1 1.89543 1.89543 1 3 1H33.0699C34.1744 1 35.0699 1.89543 35.0699 3V32.607L23.1659 45.1266H3C1.89543 45.1266 1 44.2312 1 43.1266V3Z"
+                        stroke="#00A0FF"
+                        stroke-width="2"
+                        stroke-miterlimit="22.9256"
+                      />
+                      <path
+                        d="M23.1659 45.1266V32.607H35.0698"
+                        stroke="#00A0FF"
+                        stroke-width="2"
+                        stroke-miterlimit="22.9256"
+                      />
+                      <path
+                        d="M8.59387 17.6245L15.1616 23.9869L27.476 11.8777"
+                        stroke="#00A0FF"
+                        stroke-width="2"
+                        stroke-miterlimit="22.9256"
+                      />
+                    </svg>
+                    <h2>Запрос успешно отправлен</h2>
+                    <p>
+                      В ближайшее время один из наших менеджеров свяжется с Вами
+                    </p>
+                  </div>
+                  <div class="shipping__success-button">
+                    <button id="return">Вернуться к просмотру</button>
+                  </div>
+                </div>
+                <div id="form-submit">
+                  <div class="shipping__form-button">
+                    <button id="delivery" class="form__button-delivery">
+                      Доставка
+                    </button>
+                    <button id="pickup" class="form__button-pickup">
+                      Самовывоз
+                    </button>
+                  </div>
+                  <div class="header__shipping-form">
+                    <form
+                      id="form-delivery"
+                      action="#"
+                      class="shipping__form-delivery"
+                    >
+                      <div class="form__delivery-data">
+                        <input
+                          id="data"
+                          type="date"
+                          placeholder="Дата доставки"
+                          required
+                        />
+                      </div>
+                      <div class="form__delivery-checkbox">
+                        <div class="delivery__checkbox-item">
+                          <div class="delivery__checkbox-link">
+                            <input type="checkbox" id="checkbox" />
+                            <label for="checkbox">СК-6 (6 л)</label>
+                          </div>
+                          <input
+                            class="delivery__checkbox-input"
+                            type="number"
+                            placeholder="Количество"
+                          />
+                        </div>
+                        <div class="delivery__checkbox-item">
+                          <div class="delivery__checkbox-link">
+                            <input type="checkbox" id="checkbox" />
+                            <label for="checkbox">L-2005 (6 л)</label>
+                          </div>
+                          <input
+                            class="delivery__checkbox-input"
+                            type="number"
+                            placeholder="Количество"
+                          />
+                        </div>
+                        <div class="delivery__checkbox-item">
+                          <div class="delivery__checkbox-link">
+                            <input type="checkbox" id="checkbox" />
+                            <label for="checkbox">L-2012 (12 л)</label>
+                          </div>
+                          <input
+                            class="delivery__checkbox-input"
+                            type="number"
+                            placeholder="Количество"
+                          />
+                        </div>
+                        <div class="delivery__checkbox-item">
+                          <div class="delivery__checkbox-link">
+                            <input type="checkbox" id="checkbox" />
+                            <label for="checkbox">CK-16 (16 л)</label>
+                          </div>
+                          <input
+                            class="delivery__checkbox-input"
+                            type="number"
+                            placeholder="Количество"
+                          />
+                        </div>
+                      </div>
+                      <div class="form__delivery-comment">
+                        <textarea
+                          name="comment"
+                          id="comment"
+                          placeholder="Комментарий для курьера"
+                        ></textarea>
+                      </div>
+                      <div class="shipping__form-submit">
+                        <button type="submit">Отправить запрос</button>
+                        <p>
+                          Доставка жидкого азота производится в течение
+                          следующего рабочего дня при заказе до 16:00 текущего
+                          рабочего дня
+                        </p>
+                      </div>
+                    </form>
+                    <form
+                      id="form-pickup"
+                      action="#"
+                      class="shipping__form-pickup"
+                    >
+                      <div class="form__delivery-data">
+                        <input
+                          id="data"
+                          type="date"
+                          placeholder="Дата доставки"
+                          required
+                        />
+                      </div>
+                      <div class="form__pickup-item">
+                        <input
+                          type="number"
+                          name="item-1-volume"
+                          id="item-1-volume"
+                          class="form__pickup-left"
+                          placeholder="Объем (л)"
+                          required
+                        />
+                        <input
+                          type="number"
+                          name="item-1-quantity"
+                          id="item-1-quantity"
+                          class="form__pickup-right"
+                          placeholder="Количество"
+                          required
+                        />
+                        <button
+                          id="reset-icon"
+                          type="button"
+                          onclick="resetFields(1)"
+                        >
+                          <img src="img/icon/reset icon 1.svg" alt="" />
+                        </button>
+                      </div>
+                      <div class="form__pickup-item">
+                        <input
+                          type="number"
+                          name="item-2-volume"
+                          id="item-2-volume"
+                          class="form__pickup-left"
+                          placeholder="Объем (л)"
+                        />
+                        <input
+                          type="number"
+                          name="item-2-quantity"
+                          id="item-2-quantity"
+                          class="form__pickup-right"
+                          placeholder="Количество"
+                        />
+                        <button type="button" onclick="resetFields(2)">
+                          <img src="img/icon/close icon.svg" alt="" />
+                        </button>
+                      </div>
+                      <div class="form__pickup-item">
+                        <input
+                          type="number"
+                          name="item-3-volume"
+                          id="item-3-volume"
+                          class="form__pickup-left"
+                          placeholder="Объем (л)"
+                        />
+                        <input
+                          type="number"
+                          name="item-3-quantity"
+                          id="item-3-quantity"
+                          class="form__pickup-right"
+                          placeholder="Количество"
+                        />
+                        <button type="button" onclick="resetFields(3)">
+                          <img src="img/icon/close icon.svg" alt="" />
+                        </button>
+                      </div>
+                      <div class="form__pickup-add">
+                        <button type="button">
+                          <img src="img/icon/plus icon.svg" alt="" />Добавить
+                          объем и кол-во
+                        </button>
+                      </div>
+                      <div class="form__delivery-comment">
+                        <textarea
+                          name="comment"
+                          id="comment"
+                          placeholder="Комментарии"
+                        ></textarea>
+                      </div>
+                      <div class="shipping__form-submit">
+                        <button type="submit">Отправить запрос</button>
+                        <p>
+                          При самовывозе сосуд Дьюара предоставляется заказчиком
+                        </p>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="header__breadcrumbs">
+              <ul class="header__breadcrumbs-list">
+                <li class="header__breadcrumbs-item">
+                  <a href="#" class="header__breadcrumbs-link">Криотек</a>
+                </li>
+                <li class="header__breadcrumbs-item">
+                  <span>/</span>
+                </li>
+                <li class="header__breadcrumbs-item">
+                  <a href="#" class="header__breadcrumbs-link"
+                    >Жидкий азот</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="main__nitrgen nitrogen">
+          <div class="container">
+            <div class="nitrogen-inner">
+              <div class="nitrogen__top">
+                <h1>Жидкий азот</h1>
+                <div class="nitrogen__top-price">
+                  <h2>ОТ 70 ₽</h2>
+                  <span>1л</span>
+                </div>
+              </div>
+              <div class="nitrogen__bottom">
+                <span>Скидка 5% при заказе через сайт</span>
+                <button id="design">Оформить заказ</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main__description description">
+          <div class="container">
+            <div class="description-inner">
+              <div class="description__body">
+                <h2>
+                  Вы можете сделать заказ на нашем сайте в удобное для вас
+                  время, заполнив опросный лист. Оплата производится по
+                  безналичному расчету. Доставка и отпуск осуществляется после
+                  предварительной оплаты или по договору.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main__delivery delivery">
+          <div class="container">
+            <div class="delivery-inner">
+              <div class="delivery__top">
+                <div class="delivery__top-left">
+                  <h3>Доставка</h3>
+                  <p>
+                    Доставка жидкого азота осуществляется по Москве в сосудах
+                    Дьюара в течение двух рабочих дней с 7:00 до 15:00
+                    ежедневно, кроме субботы, воскресенья и праздничных дней.
+                    Доставка до кабинета.
+                  </p>
+                  <p>
+                    Заказы с доставкой по Москве, поступившие до 16 часов,
+                    доставляются в течение следующих 2-х рабочих дней, после 16
+                    часов - в течение следующих 3-х рабочих дней. Если заказ Вам
+                    нужен срочно, Вы можете забрать его самовывозом.
+                  </p>
+                </div>
+                <div class="delivery__top-right">
+                  <h3>Самовывоз (отпуск)</h3>
+                  <p>
+                    Отпуск жидкого азота производится в сосуды Дьюара заказчика
+                    - ежедневно (кроме субботы, воскресенья и праздничных дней)
+                    с 9:00 до 16:00 по адресу:
+                  </p>
+                  <p>
+                    Москва, ул. Горбунова д.2 стр.5 (КПП №2 ВИЛС - Всероссийский
+                    институт легких сплавов). GPS координаты 55.723857,
+                    37.394224
+                  </p>
+                </div>
+              </div>
+              <div class="delivery__body">
+                <img class="delivery__body-map" src="img/map.svg" alt="">
+              </div>
+              <div class="delivery__bottom">
+                <p>
+                  Получить дополнительную информацию можно по тел.
+                  <a href="tel:+7 495 269 1277">+7 495 269 1277</a> в будние дни
+                  с 9:00 до 16:00 или по e-mail
+                  <a href="mail:info@cryotec.ru">info@cryotec.ru</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+          <div class="container">
+            <div class="footer__menu">
+              <div class="footer__menu-inner">
+                <div class="footer__menu-catalog">
+                  <h3>Каталог</h3>
+                  <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link"
+                        >Криотехника по областям</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link">Готовые решения</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link">Криотерапия</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link">Криохирургия</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link">Криоконсервация</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__menu-info">
+                  <h3>Информация</h3>
+                  <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link">Вакансии</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link">Новости</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link">Статьи</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link"
+                        >Часто задаваемые вопросы</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__menu-company">
+                  <h3>Компания</h3>
+                  <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link">О компании</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link"
+                        >Контакты и схема проезда</a
+                      >
+                    </li>
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link">Авторизация</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a href="#" class="footer__menu-link"
+                        >Пользовательское соглашение</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="frame" class="footer__menu-order">
+                  <p>
+                    На нашем сайте Вы можете заказать ж/азот в удобное для вас
+                    время, с возможностью доставки или самовывоза
+                  </p>
+                  <button id="footer-order-nitrogen">Заказать ж/азот</button>
+                </div>
+              </div>
+              <ul class="footer__menu-accordion">
+              <li class="menu__accordion-item">
+                <div href="#" class="menu__accordion-link">
+                  <div class="menu__accordion-head">
+                    <h2>Каталог</h2>
+                    <svg 
+                        class="accordion__head-arrow"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/other.svg#arrow"></use>
+                    </svg>
+                  </div>
+                    <ul class="footer__menu-list" style="display: none;">
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Криотехника по областям</a>
+                      </li>
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Готовые решения</a>
+                      </li>
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Криотерапия</a>
+                      </li>
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Криохирургия</a>
+                      </li>
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Криоконсервация</a>
+                      </li>
+                    </ul>
+                  </div>
+              </li>
+              </ul>
+              <ul class="footer__menu-accordion">
+              <li class="menu__accordion-item">
+                <div href="#" class="menu__accordion-link">
+                  <div class="menu__accordion-head">
+                    <h2>Информация</h2>
+                    <svg 
+                        class="accordion__head-arrow"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/other.svg#arrow"></use>
+                    </svg>
+                  </div>
+                    <ul class="footer__menu-list" style="display: none;">
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Вакансии</a>
+                      </li>
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Новости</a>
+                      </li>
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Статьи</a>
+                      </li>
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link"
+                          >Часто задаваемые вопросы</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+              </li>
+              </ul>
+              <ul class="footer__menu-accordion">
+              <li class="menu__accordion-item">
+                <div href="#" class="menu__accordion-link">
+                  <div class="menu__accordion-head">
+                    <h2>Компания</h2>
+                    <svg 
+                        class="accordion__head-arrow"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/other.svg#arrow"></use>
+                    </svg>
+                  </div>
+                    <ul class="footer__menu-list" style="display: none;">
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">О компании</a>
+                      </li>
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link"
+                          >Контакты и схема проезда</a
+                        >
+                      </li>
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Авторизация</a>
+                      </li>
+                      <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link"
+                          >Пользовательское соглашение</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+              </li>
+              </ul>
+                <div id="frame-none" class="footer__menu-order">
+              <p>
+                На нашем сайте Вы можете заказать ж/азот в удобное для вас
+                время, с возможностью доставки или самовывоза
+              </p>
+              <button id="footer-order-nitrogen-2">Заказать ж/азот</button>
+            </div>
+            </div>
+        </div>
+        <div class="footer__info">
+          <div class="container">
+            <div class="footer__info-inner">
+              <div class="footer__info-top">
+                <div class="footer__info-logo">
+                  <a href="#header"><img src="img/icon/logo.svg" alt="" /></a>
+                </div>
+                <div class="footer__info-address">
+                  <p>
+                    121596 Москва Горбунова 2, стр. 3 БЦ «Гранд Сетунь Плаза»
+                    офис 201
+                  </p>
+                </div>
+                <div class="footer__info-social">
+                    <div class="footer__social-head">
+                        <a href="tel:+7 (495) 620 70 44">+7 (495) 620 70 44</a>
+                        <a href="mail:info@cryotec.ru">info@cryotec.ru</a>
+                    </div>
+                  <ul class="footer__info-list">
+                    <li class="footer__info-item">
+                      <a href="#" class="footer__info-link">
+                        <svg 
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/social.svg#vk"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="footer__info-item">
+                      <a href="#" class="footer__info-link">
+                        <svg 
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/social.svg#gis"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="footer__info-item">
+                      <a href="#" class="footer__info-link">
+                        <svg 
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/social.svg#zoon"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="footer__info-item">
+                      <a href="#" class="footer__info-link">
+                        <svg 
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/social.svg#flamp"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__info-time">
+                  <p>Время работы: пн-пт — с 9:00 до 18:00 сб, вс — выходной</p>
+                </div>
+              </div>
+              <div class="footer__info-bottom">
+                <div class="footer__info-rights">
+                  <p>© Cryotec LLC 1996-2023 Все права защищены</p>
+                </div>
+                <div class="footer__info-attention">
+                  <p>
+                    Внимание! Сайт не является публичной офертой, вся информация
+                    носит справочный характер. Все условия заказа уточняются у
+                    менеджера
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
